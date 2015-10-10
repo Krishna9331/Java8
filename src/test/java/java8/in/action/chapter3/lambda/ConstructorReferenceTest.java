@@ -1,10 +1,8 @@
 package java8.in.action.chapter3.lambda;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

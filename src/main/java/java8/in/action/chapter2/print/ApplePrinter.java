@@ -3,7 +3,7 @@ package java8.in.action.chapter2.print;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 
 public class ApplePrinter {
 

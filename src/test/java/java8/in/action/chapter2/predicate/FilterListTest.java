@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 
 public class FilterListTest {
 	

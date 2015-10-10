@@ -5,7 +5,7 @@
  */
 package java8.in.action.chapter2.weight;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 
 /**
  *

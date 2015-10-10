@@ -8,7 +8,7 @@ package com.oracle.java8.lession1;
 import java.util.List;
 import java.util.Optional;
 
-import com.oracle.java8.vo.Student;
+import common.vo.Student;
 
 /**
  *

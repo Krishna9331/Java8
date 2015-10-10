@@ -1,6 +1,6 @@
 package java8.in.action.chapter3.lambda;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 import helper.AppleBuilder;
 import org.junit.Before;
 import org.junit.Test;

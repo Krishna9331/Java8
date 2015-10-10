@@ -1,6 +1,6 @@
 package java8.in.action.chapter3.lambda;
 
-import com.oracle.java8.vo.Apple;
+import common.vo.Apple;
 import java8.in.action.chapter3.function.Function;
 
 import java.util.ArrayList;
