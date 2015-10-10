@@ -6,14 +6,31 @@
 package com.oracle.java8.vo;
 
 /**
- *
  * @author mishrk3
  */
 public class Apple {
-    
+
     private Double weight;
     private String color;
     private String origin;
+
+    public Apple() {
+    }
+
+    public Apple(Double weight) {
+        this.weight = weight;
+    }
+
+    public Apple(Double weight, String color) {
+        this.weight = weight;
+        this.color = color;
+    }
+
+    public Apple(Double weight, String color, String origin) {
+        this.weight = weight;
+        this.color = color;
+        this.origin = origin;
+    }
 
     public Double getWeight() {
         return weight;
@@ -38,5 +55,5 @@ public class Apple {
     public void setOrigin(String origin) {
         this.origin = origin;
     }
-    
+
 }

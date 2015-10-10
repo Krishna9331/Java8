@@ -20,7 +20,7 @@ public class FilterListTest {
 	    }
 
 	@Test
-	public void testFiletr() {
+	public void testFilter() {
 		List<Apple> result = FilterList.filter(apples, (Apple apple) -> "red".equals(apple.getColor()));
 		assertFalse(result.isEmpty());
 		assertTrue(result.size() == 4);
