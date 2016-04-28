@@ -1,6 +1,6 @@
 package java8.in.action.chapter5;
 
-import java8.in.action.chapter5.problem.Transaction;
+import common.vo.Transaction;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,5 +1,8 @@
 package java8.in.action.chapter5.problem;
 
+import common.vo.Trader;
+import common.vo.Transaction;
+
 import java.util.List;
 import java.util.stream.Collectors;
 

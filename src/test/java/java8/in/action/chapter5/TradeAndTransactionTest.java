@@ -1,8 +1,8 @@
 package java8.in.action.chapter5;
 
 import java8.in.action.chapter5.problem.TradeAndTransactions;
-import java8.in.action.chapter5.problem.Trader;
-import java8.in.action.chapter5.problem.Transaction;
+import common.vo.Trader;
+import common.vo.Transaction;
 import org.junit.Before;
 import org.junit.Test;
 

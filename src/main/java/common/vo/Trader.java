@@ -1,4 +1,4 @@
-package java8.in.action.chapter5.problem;
+package common.vo;
 
 /**
  * Created by mishrk3 on 4/27/2016.
