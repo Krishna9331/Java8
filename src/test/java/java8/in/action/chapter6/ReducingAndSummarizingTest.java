@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -61,5 +62,34 @@ public class ReducingAndSummarizingTest {
 		assertTrue(transaction.isPresent());
 		assertEquals("Brian", transaction.get().getTrader().getName());
 		assertEquals(300, transaction.get().getTradeAmount());
+	}
+
+	@Test public void testTotalTransaction() {
+		assertEquals(4060, ras.totalTransaction(transactions));
+	}
+
+	@Test public void testGetAllTogether() {
+		IntSummaryStatistics iss = ras.getAllTogether(transactions);
+		assertEquals(6, iss.getCount());
+		assertEquals(4060, iss.getSum());
+		assertEquals(1000, iss.getMax());
+		assertEquals(300, iss.getMin());
+		double d1 = 4060;
+		double d2 = 6;
+		assertEquals(d1 / d2, iss.getAverage());
+	}
+
+	@Test public void testJoinTradersInTrans() {
+		assertEquals(
+				"Brian-->2011-->300, Raoul-->2012-->1000, Raoul-->2011-->400, Mario-->2012-->710, Mario-->2012-->700, "
+						+ "Alan-->2012-->950", ras.joinTradersInTrans(transactions));
+	}
+
+	@Test public void testSumUsingReducingCollect() {
+		assertEquals(4060, ras.sumUsingReducingCollect(transactions));
+	}
+
+	@Test public void testMaxUsingReducingCollect() {
+		assertEquals(1000, ras.maxUsingReducingCollect(transactions).get().getTradeAmount());
 	}
 }
