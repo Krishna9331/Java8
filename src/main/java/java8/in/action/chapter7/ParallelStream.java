@@ -4,6 +4,7 @@ package java8.in.action.chapter7;
  * Created by mishrk3 on 5/3/2016.
  */
 
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
@@ -21,10 +22,10 @@ import java.util.stream.Stream;
 public class ParallelStream {
 
 	/**
-	 * The difference is that the Stream is internally divided into multiple chunks.
+	 * In parallel processing the Stream is internally divided into multiple chunks.
 	 * As a result, the reduction operation can work on the various chunks independently and in parallel.
 	 * Finally, the same reduction operation combines the values resulting from the partial reductions of each
-	 * substream, producing the result of the reduction process on the whole initial stream.
+	 * sub stream, producing the result of the reduction process on the whole initial stream.
 	 * In reality, calling the method parallel on a sequential stream doesn’t imply any
 	 * concrete transformation on the stream itself. Internally, a boolean flag is set to signal that we
 	 * want to run in parallel all the operations that follow the invocation to parallel. Similarly, we can
@@ -48,13 +49,19 @@ public class ParallelStream {
 	 * each sum operation on a different thread. Also iterate generates boxed objects, which have to be unboxed to
 	 * numbers before they can be added.
 	 * LongStream.rangeClosed would be the better candidate for parallel stream.
-	 * This is evidence that choosing the right data structures is often more important than parallelizing the
+	 * This is evidence that choosing the right data structures is often more important than paralleling the
 	 * algorithm that uses them.
+	 * shared mutable state doesn’t play well with parallel streams and with
+	 * parallel computations in general.
 	 *
 	 * @param n the number till where we have to sum
 	 * @return the result of addition
 	 */
-	public Long sumAll(int n) {
-		return Stream.iterate(1L, i -> i + i + 1).limit(n).parallel().reduce(0L, Long::sum);
+	public static Long sumAll(Long n) {
+		return Stream.iterate(1L, i -> i + 1).limit(n).parallel().reduce(0L, Long::sum);
+	}
+
+	public static Long sumAllUsingPrimitiveStream(Long n) {
+		return LongStream.rangeClosed(1, n).parallel().reduce(0L, Long::sum);
 	}
 }
