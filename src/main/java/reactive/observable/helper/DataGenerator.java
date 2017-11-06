@@ -1,7 +1,10 @@
 package reactive.observable.helper;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DataGenerator {
 
@@ -31,4 +34,32 @@ public class DataGenerator {
         return list;
     }
 
+    public static List<String> getGeekAlphabets() {
+        List<String> list = new ArrayList<>();
+        list.add("KK");
+        list.add("KKM");
+        list.add("Krishna");
+        list.add("Krishna Mishra");
+        list.add("Krishna Kant");
+        list.add("Krishna Kant Mishra");
+        return list;
+    }
+
+    public static List<String> getEmptyGeekAlphabets() {
+        List<String> list = new ArrayList<>();
+        return list;
+    }
+
+    public static List<String> generateScrambledAlphabet() {
+        List<String> list = new ArrayList<>();
+        list.addAll(getGeekAlphabets());
+        list.addAll(getGeekAlphabets());
+        list.addAll(getGeekAlphabets());
+        Collections.shuffle(list);
+        return list;
+    }
+
+    public static List<Integer> generateBigIntegers() {
+        return IntStream.range(0, 100).boxed().collect(Collectors.toList());
+    }
 }
