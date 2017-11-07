@@ -1,4 +1,4 @@
-package reactive.observable.helper;
+package reactive.helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,12 +36,30 @@ public class DataGenerator {
 
     public static List<String> getGeekAlphabets() {
         List<String> list = new ArrayList<>();
-        list.add("KK");
-        list.add("KKM");
-        list.add("Krishna");
-        list.add("Krishna Mishra");
-        list.add("Krishna Kant");
-        list.add("Krishna Kant Mishra");
+        list.add("Alpha");
+        list.add("Beta");
+        list.add("Gamma");
+        list.add("Delta");
+        list.add("Epsilon");
+        list.add("Zeta");
+        list.add("Eta");
+        list.add("Theta");
+        list.add("Iota");
+        list.add("Kappa");
+        list.add("Lambda");
+        list.add("Mu");
+        list.add("Nu");
+        list.add("Xi");
+        list.add("Omicron");
+        list.add("Pi");
+        list.add("Rho");
+        list.add("Sigma");
+        list.add("Tau");
+        list.add("Upsilon");
+        list.add("Phi");
+        list.add("Chi");
+        list.add("Psi");
+        list.add("Omega");
         return list;
     }
 

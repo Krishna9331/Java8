@@ -1,7 +1,7 @@
 package reactive.observable;
 
-import reactive.observable.helper.UserSecurityStatus;
-import reactive.observable.helper.UserService;
+import reactive.helper.UserSecurityStatus;
+import reactive.helper.UserService;
 import rx.Observable;
 import rx.schedulers.Schedulers;
 

@@ -1,6 +1,6 @@
 package reactive.observable;
 
-import reactive.observable.helper.DataGenerator;
+import reactive.helper.DataGenerator;
 import rx.Observable;
 
 public class PositionalFilteringObservable {

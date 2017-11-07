@@ -1,6 +1,6 @@
 package reactive.observable;
 
-import reactive.observable.helper.TimeTicker;
+import reactive.helper.TimeTicker;
 
 import java.util.concurrent.TimeUnit;
 

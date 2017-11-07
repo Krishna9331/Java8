@@ -1,4 +1,4 @@
-package reactive.observable.helper;
+package reactive.helper;
 
 import rx.Observable;
 import rx.subjects.BehaviorSubject;

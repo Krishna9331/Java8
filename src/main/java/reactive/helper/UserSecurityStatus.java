@@ -1,4 +1,4 @@
-package reactive.observable.helper;
+package reactive.helper;
 
 public enum UserSecurityStatus {
     ADMINISTRATOR,
