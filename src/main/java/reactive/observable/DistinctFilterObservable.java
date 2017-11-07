@@ -8,12 +8,12 @@ public class DistinctFilterObservable {
     public static void main(String[] args) {
         System.out.println("List without distinct operation");
         Observable.from(DataGenerator.generateScrambledAlphabet())
-                .subscribe(System.out::print);
+                .subscribe(i -> System.out.print(i + " "));
 
         System.out.println();
-        System.out.println("List without distinct operation");
+        System.out.println("List after distinct operation");
         Observable.from(DataGenerator.generateScrambledAlphabet())
                 .distinct()
-                .subscribe(System.out::print);
+                .subscribe(i -> System.out.print(i + " "));
     }
 }

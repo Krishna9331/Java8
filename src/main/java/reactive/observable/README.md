@@ -53,3 +53,8 @@ Observable is created using from method (static factory method) of Observable, I
 
 Similarly we have from method for BlockingObservable as well:
 <T> Observable<T> BlockingObservable.from(Observable o)
+
+###This package contains below implementation
+1.Observable creation\
+2.Composition\
+3.Filtering
