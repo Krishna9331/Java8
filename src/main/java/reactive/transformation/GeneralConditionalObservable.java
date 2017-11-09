@@ -31,7 +31,7 @@ public class GeneralConditionalObservable {
         System.out.println();
 
         Observable.from(DataGenerator.getFibonacci())
-                .takeWhileWithIndex((idx, num) -> idx < 3)
+                .takeWhileWithIndex((num, idx) -> idx < 3)
                 .subscribe(System.out::println);
     }
 }
